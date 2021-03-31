@@ -1,0 +1,798 @@
+.loader-wheel {
+  animation: spin 1s infinite linear;
+  border: 2px solid rgba(30, 30, 30, 0.5);
+  border-left: 2px solid #fff;
+  border-radius: 50%;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.dialogContent {
+  border-radius: 12px;
+  max-width: 500px;
+  position: relative;
+  overflow: hidden;
+  align-self: center;
+  // box-shadow: rgb(0 0 0 / 10%) 0px 4px 10px;
+  box-shadow: 0 11px 15px -7px rgb(0 0 0 / 20%),
+    0 24px 38px 3px rgb(0 0 0 / 14%), 0 9px 46px 8px rgb(0 0 0 / 12%);
+  background-color: white;
+  padding: 5px;
+
+  .el-dialog__wrapper {
+    display: flex;
+  }
+
+  .el-dialog__title {
+    color: black;
+  }
+
+  .el-dialog__body {
+    color: black;
+    a {
+      text-decoration: none;
+      color: black
+    }
+    a:hover {
+      color: rgb(32, 134, 254)
+    }
+  }
+}
+
+.dialog-footer {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-around;
+}
+
+.noConnectContent {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  background: rgb(255, 255, 255);
+  box-shadow: rgb(200 200 200 / 80%) 0px 1rem 2rem;
+  border-radius: 1rem;
+  width: calc(100% - 2rem);
+  margin-top: 5rem;
+  padding: 2rem;
+  max-width: 27.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.connectDialogLogo {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  background: #444444;
+  border-radius: 50%;
+  padding: 1rem;
+  color: rgb(255, 255, 255);
+  margin-bottom: 1rem;
+}
+
+.connectLogo {
+  width: 1.75rem;
+  height: 1.75rem;
+  display: inline-block;
+  line-height: 1em;
+  flex-shrink: 0;
+  color: currentcolor;
+  vertical-align: middle;
+}
+
+.connectDialogTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.connectDialogDesc {
+  color: rgb(117, 129, 141);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.connectDialogBtn {
+  display: inline-flex;
+  appearance: none;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  transition: all 250ms ease 0s;
+  user-select: none;
+  position: relative;
+  white-space: nowrap;
+  vertical-align: middle;
+  outline: none;
+  width: auto;
+  line-height: 1.2;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  height: 2.5rem;
+  min-width: 2.5rem;
+  font-size: 1rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  background: #444444;
+  color: rgb(255, 255, 255);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+  overflow-x: hidden;
+  font-family: Roboto, sans-serif;
+  width: 100%;
+  min-height: 100vh;
+  background: rgb(245, 245, 245);
+  position: relative;
+
+  .upBGImage {
+    position: absolute;
+    right: min(-15rem, -20%);
+    width: 60rem;
+    min-width: 30rem;
+    max-width: 100%;
+    opacity: 0.99;
+    height: auto;
+    display: block;
+  }
+
+  .downBGImage {
+    position: absolute;
+    left: min(-27rem, -20%);
+    width: 81rem;
+    min-width: 60rem;
+    opacity: 0.99;
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .bar {
+    display: flex;
+    flex-direction: row;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    position: relative;
+    max-width: 75rem;
+    min-height: 5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 100%;
+    background: transparent;
+    margin-bottom: 0px;
+    box-shadow: none;
+
+    .left {
+      display: flex;
+      -webkit-box-align: center;
+      align-items: center;
+      -webkit-box-pack: justify;
+      justify-content: space-between;
+      height: 5rem;
+
+      .leftContent {
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        justify-content: space-around;
+
+        .leftImage {
+          margin-right: 0.8rem;
+          height: 28px;
+          display: block;
+        }
+      }
+    }
+
+    .right {
+      display: flex;
+      -webkit-box-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      justify-content: center;
+      flex-direction: row;
+      position: static;
+      width: auto;
+      height: auto;
+
+      .ethNetContent {
+        display: flex;
+
+        .addressButton {
+          display: inline-flex;
+          // box-sizing: border-box;
+          appearance: none;
+          -webkit-box-align: center;
+          align-items: center;
+          -webkit-box-pack: center;
+          justify-content: center;
+          transition: all 250ms ease 0s;
+          user-select: none;
+          position: relative;
+          white-space: nowrap;
+          vertical-align: middle;
+          outline: none;
+          width: auto;
+          line-height: 1.2;
+          border-radius: 0.375rem;
+          font-weight: 600;
+          height: 2.5rem;
+          min-width: 2.5rem;
+          font-size: 1rem;
+          font-family: inherit;
+          padding-left: 1rem;
+          padding-right: 1rem;
+          background: #444444;
+          color: rgb(255, 255, 255);
+          border-width: 0;
+
+          .networkID {
+            display: flex;
+            -webkit-box-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            justify-content: center;
+            background: rgb(255, 255, 255);
+            border-radius: 6px;
+            padding-left: 0.75rem;
+            padding-right: 0.75rem;
+            height: 2rem;
+            font-size: 0.875rem;
+            color: #444444;
+            font-weight: 600;
+            margin-left: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.contentBox {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  flex: 1 1 0%;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.transferContent {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  max-width: 75rem;
+  background: rgb(255, 255, 255);
+  box-shadow: rgb(200 200 200 / 80%) 0px 1rem 2rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: auto 1rem;
+}
+
+.transfer_top {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.transfer_top_left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.transfer_top_right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.transfer_top_top {
+  color: rgb(117, 129, 141);
+  font-size: 0.875rem;
+}
+
+.transfer_top_bottom {
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+.transferOperating {
+  display: grid;
+  grid-template-columns: initial;
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.transferOperating_left {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  margin: 0.5rem;
+  position: relative;
+  border-radius: 0.25rem;
+  border: 1px solid rgb(218, 227, 240);
+  min-height: 2rem;
+}
+
+.transferOperating_left_content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: auto;
+  width: 100%;
+  padding: 1rem;
+}
+
+.transferOperating_content_top {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.transferCoin {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1;
+  background: transparent;
+}
+
+.transferCoin_icon {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  background: transparent;
+  width: 2rem;
+  height: 2rem;
+  overflow: hidden;
+}
+
+.transferCoin_coinName {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.transferBalance {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+  flex: 1 1 0%;
+  height: 100%;
+  position: relative;
+}
+
+.transferBalance_balance {
+  color: #d4d4d4;
+  text-align: right;
+  position: absolute;
+  bottom: 4px;
+  right: 0px;
+}
+
+.mobile_transferBalance_balance {
+  color: #d4d4d4;
+  text-align: right;
+  margin: 0;
+}
+
+.transferOperating_left_content_bottom {
+  display: flex;
+  align-items: flex-end;
+  flex: 1 1 0%;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  padding-left: 1rem;
+  padding-right: 3rem;
+  padding-bottom: 1rem;
+}
+
+.transferOperating_input {
+  width: 100%;
+  outline: 0px;
+  position: relative;
+  appearance: none;
+  transition: all 0.2s ease 0s;
+  font-size: 1.5rem;
+  padding-left: 0px;
+  padding-right: 0px;
+  height: auto;
+  border-radius: 0.375rem;
+  background: transparent;
+  flex: 1 1 0%;
+  text-align: left;
+  font-weight: 700;
+}
+
+.transferOperating_maxButton {
+  display: inline-flex;
+  appearance: none;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  transition: all 250ms ease 0s;
+  user-select: none;
+  position: relative;
+  white-space: nowrap;
+  vertical-align: middle;
+  outline: none;
+  width: auto;
+  line-height: 1.2;
+  border-radius: 0.375rem;
+  font-weight: 400;
+  height: 2rem;
+  min-width: 2rem;
+  font-size: 0.875rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  background: rgb(244, 244, 244);
+  margin-left: 0.5rem;
+  color: black;
+}
+
+.transferButtonContent {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.transferButton {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  padding: 0;
+  color: #444444;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.25s ease 0s;
+  position: relative;
+  opacity: 1;
+  border-radius: 0.25rem;
+  width: 10rem;
+  outline: none;
+}
+
+.transferButton:nth-child(2) {
+  margin-top: 0.5rem;
+}
+
+.transferFee {
+  margin-top: 16px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.transferButton:focus {
+  outline: none;
+}
+
+.transferButton::-moz-focus-inner {
+  border-color: transparent;
+}
+
+.transferButton:hover {
+  color: #333333;
+}
+
+.transferButton:disabled {
+  cursor: not-allowed;
+  color: #9999;
+}
+
+.transferButton_inside {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.transferButtonTitle {
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+}
+
+.transferButtonImage {
+  margin-left: 0.5rem;
+}
+
+.transferOperating_right {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  margin: 0.5rem;
+  position: relative;
+  border-radius: 0.25rem;
+  background: rgb(238, 244, 253);
+  min-height: 2rem;
+}
+
+.transferOperating_right_content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: auto;
+  width: 100%;
+  padding: 1rem;
+}
+
+.transferOperating_right_content_bottom {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  justify-content: center;
+  flex: 1 1 0%;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  padding-left: 3rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  height: 52px;
+}
+
+.mobile_transferOperating_right_content_bottom {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  justify-content: center;
+  flex: 1 1 0%;
+  height: 52px;
+}
+
+.transferOperating_toNum {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.mobile_transferFromContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0.5rem;
+}
+
+.mobile_transferOperatingFrom {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  margin: 0.5rem;
+  position: relative;
+  border-radius: 0.25rem;
+  border: 1px solid rgb(239, 239, 239);
+  min-height: 5rem;
+  min-width: 15rem;
+}
+
+.mobile_transferOperating_left_content_bottom {
+  display: flex;
+  align-items: flex-end;
+  flex: 1 1 0%;
+}
+
+.mobile_transferToContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 0.5rem;
+}
+
+.mobile_transferOperatingTo {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  margin: 0.5rem;
+  position: relative;
+  border-radius: 0.25rem;
+  background: rgb(242, 242, 242);
+  min-height: 5rem;
+  min-width: 15rem;
+}
+
+.bottom {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  position: relative;
+  height: 5rem;
+  max-width: 75rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  width: 100%;
+  color: #d4d4d4;
+}
+
+.bottomLogo {
+  width: 26px;
+  display: none;
+}
+
+.bottomContent {
+  float: right;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.bottomSep {
+  width: 1px;
+  height: 1.25rem;
+  background: #d4d4d4;
+  margin-left: 1rem;
+}
+
+.github {
+  transition: all 0.25s ease 0s;
+  padding-bottom: 2px;
+}
+
+.githunbIcon {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  line-height: 1em;
+  flex-shrink: 0;
+  color: gray;
+  vertical-align: middle;
+}
+
+@media screen and (min-width: 30em) {
+  .content .bar {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .transferContent {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .transferOperating_content_top {
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+  }
+
+  .transferBalance {
+    margin-left: 0.5rem;
+  }
+
+  .transferButton {
+    width: 12rem;
+  }
+
+  .bottom {
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+  }
+
+  .bottomLogo {
+    width: 26px;
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .content .bar {
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .transferContent {
+    padding: 2rem;
+  }
+}
+
+@media screen and (min-width: 62em) {
+  .content .bar {
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .transferContent {
+    width: calc(100% - 4rem);
+  }
+
+  .transferOperating {
+    grid-template-columns: 2fr 1fr 2fr;
+  }
+
+  .transferOperating_left {
+    margin: 0px -1.5rem 0px 0px;
+    border: 0px;
+  }
+
+  .transferOperating_left_content {
+    position: absolute;
+    height: 100%;
+    padding-right: 3rem;
+  }
+
+  .transferOperating_content_top {
+    align-items: flex-start;
+  }
+
+  .transferButtonContent {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .transferButton{
+    width: auto;
+  }
+
+  .transferButton:nth-child(2) {
+    margin-top: 0.9rem;
+  }
+
+  .transferOperating_right {
+    margin: 0px 0px 0px -1.5rem;
+    background: transparent;
+  }
+
+  .transferOperating_right_content {
+    position: absolute;
+    height: 100%;
+    padding-left: 3rem;
+  }
+}
